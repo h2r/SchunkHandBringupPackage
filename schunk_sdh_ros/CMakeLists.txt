@@ -3,7 +3,7 @@ project(schunk_sdh_ros)
 
 add_compile_options(-std=c++11)
 
-find_package(catkin REQUIRED COMPONENTS actionlib cob_srvs control_msgs diagnostic_msgs libntcan libpcan message_generation roscpp roslint sensor_msgs std_msgs std_srvs trajectory_msgs urdf)
+find_package(catkin REQUIRED COMPONENTS actionlib cob_srvs control_msgs diagnostic_msgs libntcan libpcan message_generation roscpp roslint sensor_msgs std_msgs std_srvs trajectory_msgs urdf schunk_sdh)
 
 find_package(Boost REQUIRED)
 

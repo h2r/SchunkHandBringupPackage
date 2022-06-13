@@ -32,5 +32,6 @@
   <depend>trajectory_msgs</depend>
   <depend>urdf</depend>
   <depend>sdhlibrary_cpp</depend>
+  <depend>schunk_sdh</depend>
 
 </package>

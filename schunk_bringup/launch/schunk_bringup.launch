@@ -1,10 +1,14 @@
 <launch>
 
 	<!-- upload robot_description -->
-	<param name="robot_description" command="$(find xacro)/xacro.py '$(find schunk_bringup)/sdh/urdf/robot.urdf.xacro'" />
+	<!-- <param name="robot_description" command="$(find xacro)/xacro.py '$(find schunk_bringup)/sdh/urdf/robot.urdf.xacro'" /> -->
 
 	<!-- start robot_state_publisher -->
-	<node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher"/>
+	<!-- <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher"/> -->
+    <node name="robot_state_publisher_gripper_right" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+      <param name="use_tf_static" value="true"/>
+      <remap from="joint_states" to="/sdh_controller/joint_states"/>
+    </node>
 
 	<!-- upload joint configuration -->
 	<rosparam command="load" ns="/script_server/arm" file="$(find schunk_bringup)/sdh/config/sdh_joint_configurations.yaml"/>

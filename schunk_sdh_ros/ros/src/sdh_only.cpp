@@ -780,7 +780,7 @@ public:
       mimicjointmsg.name.resize(1);
       mimicjointmsg.position.resize(1);
       mimicjointmsg.velocity.resize(1);
-      mimicjointmsg.name[0] = "sdh_finger_21_joint";
+      mimicjointmsg.name[0] = "schunk_right_finger_21_joint";
       mimicjointmsg.position[0] = msg.position[0];  // sdh_knuckle_joint = sdh_finger_21_joint
       mimicjointmsg.velocity[0] = msg.velocity[0];  // sdh_knuckle_joint = sdh_finger_21_joint
       topicPub_JointState_.publish(mimicjointmsg);
